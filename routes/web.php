@@ -21,6 +21,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/service-requests/history', [ServiceRequestController::class, 'history'])->name('service_requests.history');
     Route::get('/balance', [ServiceRequestController::class, 'balance'])->name('service_requests.balance');
     Route::get('/contact', [ServiceRequestController::class, 'contact'])->name('service_requests.contact');
+    Route::get('/service-requests/balance', [ServiceRequestController::class, 'balance'])->name('service_requests.balance');
+
 });
 
 require __DIR__.'/auth.php';
